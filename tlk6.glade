@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkListStore" id="liststore1"/>
+  <object class="GtkWindow" id="window">
+    <signal name="delete_event" handler="on_destroy"/>
+    <child>
+      <object class="GtkFixed" id="fixed1">
+        <property name="visible">True</property>
+        <child>
+          <object class="GtkImage" id="image">
+            <property name="width_request">349</property>
+            <property name="height_request">493</property>
+            <property name="visible">True</property>
+            <property name="stock">gtk-missing-image</property>
+          </object>
+          <packing>
+            <property name="x">163</property>
+            <property name="y">98</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkTreeView" id="treeview2">
+            <property name="width_request">100</property>
+            <property name="height_request">493</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="model">liststore1</property>
+          </object>
+          <packing>
+            <property name="x">33</property>
+            <property name="y">98</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkTextView" id="textview1">
+            <property name="width_request">427</property>
+            <property name="height_request">46</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="x">53</property>
+            <property name="y">610</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkFileChooserButton" id="new_img_button">
+            <property name="width_request">130</property>
+            <property name="height_request">39</property>
+            <property name="visible">True</property>
+            <property name="title" translatable="yes">&#x9009;&#x62E9;&#x66FF;&#x6362;&#x56FE;&#x7247;</property>
+            <signal name="file_set" handler="modify_firmware"/>
+          </object>
+          <packing>
+            <property name="x">284</property>
+            <property name="y">31</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkFileChooserButton" id="ebres_button">
+            <property name="width_request">130</property>
+            <property name="height_request">39</property>
+            <property name="visible">True</property>
+            <property name="orientation">vertical</property>
+            <property name="title" translatable="yes">&#x9009;&#x62E9;ebres.bin&#x6587;&#x4EF6;</property>
+            <signal name="file_set" handler="load_firmware"/>
+          </object>
+          <packing>
+            <property name="x">31</property>
+            <property name="y">32</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
