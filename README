@@ -1,0 +1,11 @@
+The new_main.py is the UI controller and model controller. The py file which contains BMP in the filename is used to deal with special bmp in tl-k6 and extract image from windows BMP. 
+
+process: 
+
+1. extract the bmp from tl-k6
+2. display the bmp for the user
+3. replace the image with user custom one
+4. modify the ebres.BIN file
+5. replace the tl-k6 firmware iso's ebres.BIN
+
+Done!
